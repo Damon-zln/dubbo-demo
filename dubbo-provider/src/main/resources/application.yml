@@ -1,0 +1,43 @@
+# server config
+server:
+  port: 8080
+
+# spring config
+spring:
+  application:
+    name: dubbo-provider-application
+#  datasource:
+#    hikari:
+#      jdbc-url: jdbc:mysql://47.101.138.203:3306/test?useSSL=false&useUnicode=true&autoReconnect=true&allowMultiQueries=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true&zeroDateTimeBehavior=convertToNull
+#      username: root
+#      password: root
+#  redis:
+#    database: 0
+#    host: 47.101.138.203
+#    port: 6379
+#    password:
+#    lettuce:
+#      pool:
+#        max-active: 8
+#        max-wait: -1ms
+#        max-idle: 8
+#        min-idle: 0
+#      shutdown-timeout: 200ms
+
+# dubbo config
+dubbo:
+  scan:
+    base-packages: com.dazhan.dubboprovider.service
+  protocol:
+    name: dubbo
+    port: -1
+  registry:
+    address: nacos://47.101.138.203:8848
+    parameters:
+      namespace: 35894b75-212c-4d64-9fde-3ec2bcad0bd5
+  service:
+    version: 1.0.0
+
+
+
+
